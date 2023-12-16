@@ -5,6 +5,8 @@ library(factoextra)
 library(cluster)
 library(clustMixType)
 
+set.seed(1)
+
 par(mfrow = c(1,1))
 projects <- data.frame(read.csv2('GitHub_project3.csv', sep = ","))
 proj_copy <- projects
@@ -205,7 +207,7 @@ for (i in 1:nrow(result)) {
 
 
 
-
+set.seed(5)
 k <- best_k
 kmeans_result <- kmeans(best_data, centers = k, nstart = 5)
 
@@ -213,6 +215,8 @@ kmeans_result <- kmeans(best_data, centers = k, nstart = 5)
 cluster_assignments <- kmeans_result$cluster
 
 # Plot the clusters
-plot(projectscluster3[,-c(7)], col = cluster_assignments+1, pch = 16, main = "K-Means Clustering")
+plot(best_data, col = cluster_assignments+1, pch = 16, main = "K-Means Clustering")
+kmeans_result$size
+
 projects$cluster <- cluster_assignments
 projectscluster$cluster <- cluster_assignments
