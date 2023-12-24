@@ -10,7 +10,6 @@ set.seed(1)
 par(mfrow = c(1,1))
 projects <- data.frame(read.csv2('GitHub_project3.csv', sep = ","))
 proj_copy <- projects
-projects <- projects[-61,]
 projects <- projects %>%
   mutate_if(
     function(x) is.character(x) && all(grepl("^\\d+\\.?\\d*$", x)),
@@ -61,7 +60,7 @@ axis(side = 1, at = 2:25, labels = 2:25)
 par(mfrow=c(1,1))
 corrplot(cor(projectscluster), method = 'number', number.cex = 0.7, col = COL1('Greys'))
 
-projectscluster2 <- projects[, -c(1,2,3,5,7,9,10,11,12,13,14,15,16,17,18,19,26,28,29)]
+projectscluster2 <- projects[, -c(1,2,3,7,9,10,11,12,13,14,15:19,25,26,28,29)]
 
 
 
@@ -170,7 +169,7 @@ getCombinations <- function(n) {
 }
 
 # Example: Get all combinations from 3 to 5
-result <- getCombinations(10)
+result <- getCombinations(11)
 
 # Display the result
 print(result)
@@ -182,7 +181,7 @@ best_data <- 0
 for (i in 1:nrow(result)) {
   cat(i, "\n")
   for (j in 1:(ncol(result)-1)) {
-    cur_data <- projectscluster2[,c(unlist(result[i, j]))]
+    cur_data <- projectscluster[,c(unlist(result[i, j]))]
     
 
     cur_data_sil <- c()

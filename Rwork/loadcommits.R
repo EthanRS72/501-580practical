@@ -2,7 +2,7 @@ library(rdd)
 c1_rsq <- c()
 c2_rsq <- c()
 c3_rsq <- c()
-#Cluster 1 - 62 projects - (pink)
+#Cluster 1 - 52 projects - (pink)
 #	smallstep/certificates
 commits_certificates <- data.frame(read.csv2('commits_certificates.csv', sep = ","))
 commits_certificates$has_ci <- as.factor(commits_certificates$has_ci)
@@ -80,12 +80,6 @@ commits_gltf$is_core <- as.factor(commits_gltf$is_core)
 gltf_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_gltf))
 c1_rsq <- c(c1_rsq, gltf_sum$r.squared)
 
-#jupyterhub/zero-to-jupyterhub-k8s
-commits_zero_jupyterhub <- data.frame(read.csv2('commits_zero_jupyterhub.csv', sep = ","))
-commits_zero_jupyterhub$has_ci <- as.factor(commits_zero_jupyterhub$has_ci)
-commits_zero_jupyterhub$is_core <- as.factor(commits_zero_jupyterhub$is_core)
-zero_jupyterhub_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_zero_jupyterhub))
-c1_rsq <- c(c1_rsq, zero_jupyterhub_sum$r.squared)
 
 #weaviate/weaviate
 commits_weaviate <- data.frame(read.csv2('commits_weaviate.csv', sep = ","))
@@ -100,13 +94,6 @@ commits_bundlestats$has_ci <- as.factor(commits_bundlestats$has_ci)
 commits_bundlestats$is_core <- as.factor(commits_bundlestats$is_core)
 bundlestats_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_bundlestats))
 c1_rsq <- c(c1_rsq, bundlestats_sum$r.squared)
-
-#xamarin/xamarin-macios
-commits_xamarin <- data.frame(read.csv2('commits_xamarin.csv', sep = ","))
-commits_xamarin$has_ci <- as.factor(commits_xamarin$has_ci)
-commits_xamarin$is_core <- as.factor(commits_xamarin$is_core)
-xamarin_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_xamarin))
-c1_rsq <- c(c1_rsq, xamarin_sum$r.squared)
 
 #online-go/online-go.com
 commits_onlinego <- data.frame(read.csv2('commits_online-go.csv', sep = ","))
@@ -157,13 +144,6 @@ commits_postmandocs$is_core <- as.factor(commits_postmandocs$is_core)
 postmandocs_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_postmandocs))
 c1_rsq <- c(c1_rsq, postmandocs_sum$r.squared)
 
-#pingcap/docs
-commits_docs <- data.frame(read.csv2('commits_docs.csv', sep = ","))
-commits_docs$has_ci <- as.factor(commits_docs$has_ci)
-commits_docs$is_core <- as.factor(commits_docs$is_core)
-docs_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_docs))
-c1_rsq <- c(c1_rsq, docs_sum$r.squared)
-
 #RetroAchievements/RAWeb
 commits_raweb <- data.frame(read.csv2('commits_raweb.csv', sep = ","))
 commits_raweb$has_ci <- as.factor(commits_raweb$has_ci)
@@ -185,12 +165,6 @@ commits_smithay$is_core <- as.factor(commits_smithay$is_core)
 smithay_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_smithay))
 c1_rsq <- c(c1_rsq, smithay_sum$r.squared)
 
-#lf-lang/lingua-franca
-commits_linguafranca <- data.frame(read.csv2('commits_lingua-franca.csv', sep = ","))
-commits_linguafranca$has_ci <- as.factor(commits_linguafranca$has_ci)
-commits_linguafranca$is_core <- as.factor(commits_linguafranca$is_core)
-linguafranca_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_linguafranca))
-c1_rsq <- c(c1_rsq, linguafranca_sum$r.squared)
 
 #weseek/growi
 commits_growi <- data.frame(read.csv2('commits_growi.csv', sep = ","))
@@ -205,27 +179,6 @@ commits_awssdk$has_ci <- as.factor(commits_awssdk$has_ci)
 commits_awssdk$is_core <- as.factor(commits_awssdk$is_core)
 awssdk_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_awssdk))
 c1_rsq <- c(c1_rsq, awssdk_sum$r.squared)
-
-#mpusz/mp-units
-commits_mpunits <- data.frame(read.csv2('commits_mp-units.csv', sep = ","))
-commits_mpunits$has_ci <- as.factor(commits_mpunits$has_ci)
-commits_mpunits$is_core <- as.factor(commits_mpunits$is_core)
-mpunits_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_mpunits))
-c1_rsq <- c(c1_rsq, mpunits_sum$r.squared)
-
-#bids-standard/bids-specification
-commits_bidsspecification <- data.frame(read.csv2('commits_bids-specification.csv', sep = ","))
-commits_bidsspecification$has_ci <- as.factor(commits_bidsspecification$has_ci)
-commits_bidsspecification$is_core <- as.factor(commits_bidsspecification$is_core)
-bidsspecification_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_bidsspecification))
-c1_rsq <- c(c1_rsq, bidsspecification_sum$r.squared)
-
-#awsdocs/aws-doc-sdk-examples
-commits_awsdoc <- data.frame(read.csv2('commits_aws-doc.csv', sep = ","))
-commits_awsdoc$has_ci <- as.factor(commits_awsdoc$has_ci)
-commits_awsdoc$is_core <- as.factor(commits_awsdoc$is_core)
-awsdoc_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_awsdoc))
-c1_rsq <- c(c1_rsq, awsdoc_sum$r.squared)
 
 #rotki/rotki
 commits_rotki <- data.frame(read.csv2('commits_rotki.csv', sep = ","))
@@ -269,13 +222,6 @@ commits_openrouteservice$is_core <- as.factor(commits_openrouteservice$is_core)
 openrouteservice_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_openrouteservice))
 c1_rsq <- c(c1_rsq, openrouteservice_sum$r.squared)
 
-#containers/buildah
-commits_buildah <- data.frame(read.csv2('commits_buildah.csv', sep = ","))
-commits_buildah$has_ci <- as.factor(commits_buildah$has_ci)
-commits_buildah$is_core <- as.factor(commits_buildah$is_core)
-buildah_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_buildah))
-c1_rsq <- c(c1_rsq, buildah_sum$r.squared)
-
 #SamR1/FitTrackee
 commits_fittrackee <- data.frame(read.csv2('commits_fittrackee.csv', sep = ","))
 commits_fittrackee$has_ci <- as.factor(commits_fittrackee$has_ci)
@@ -283,12 +229,6 @@ commits_fittrackee$is_core <- as.factor(commits_fittrackee$is_core)
 fittrackee_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_fittrackee))
 c1_rsq <- c(c1_rsq, fittrackee_sum$r.squared)
 
-#eksctl-io/eksctl
-commits_eksctl <- data.frame(read.csv2('commits_eksctl.csv', sep = ","))
-commits_eksctl$has_ci <- as.factor(commits_eksctl$has_ci)
-commits_eksctl$is_core <- as.factor(commits_eksctl$is_core)
-eksctl_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_eksctl))
-c1_rsq <- c(c1_rsq, eksctl_sum$r.squared)
 
 #navikt/aksel
 commits_aksel <- data.frame(read.csv2('commits_aksel.csv', sep = ","))
@@ -296,20 +236,6 @@ commits_aksel$has_ci <- as.factor(commits_aksel$has_ci)
 commits_aksel$is_core <- as.factor(commits_aksel$is_core)
 aksel_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_aksel))
 c1_rsq <- c(c1_rsq, aksel_sum$r.squared)
-
-#streetsidesoftware/cspell
-commits_cspell <- data.frame(read.csv2('commits_cspell.csv', sep = ","))
-commits_cspell$has_ci <- as.factor(commits_cspell$has_ci)
-commits_cspell$is_core <- as.factor(commits_cspell$is_core)
-cspell_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_cspell))
-c1_rsq <- c(c1_rsq, cspell_sum$r.squared)
-
-#Aircoookie/WLED
-commits_wled <- data.frame(read.csv2('commits_wled.csv', sep = ","))
-commits_wled$has_ci <- as.factor(commits_wled$has_ci)
-commits_wled$is_core <- as.factor(commits_wled$is_core)
-wled_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_wled))
-c1_rsq <- c(c1_rsq, wled_sum$r.squared)
 
 #epam/ketcher
 commits_ketcher <- data.frame(read.csv2('commits_ketcher.csv', sep = ","))
@@ -423,13 +349,6 @@ commits_bsblan$is_core <- as.factor(commits_bsblan$is_core)
 bsblan_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_bsblan))
 c1_rsq <- c(c1_rsq, bsblan_sum$r.squared)
 
-#julianpoy/RecipeSage
-commits_recipesage <- data.frame(read.csv2('commits_recipesage.csv', sep = ","))
-commits_recipesage$has_ci <- as.factor(commits_recipesage$has_ci)
-commits_recipesage$is_core <- as.factor(commits_recipesage$is_core)
-recipesage_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_recipesage))
-c1_rsq <- c(c1_rsq, recipesage_sum$r.squared)
-
 #birchill/10ten-ja-reader
 commits_tenja <- data.frame(read.csv2('commits_10ja.csv', sep = ","))
 commits_tenja$has_ci <- as.factor(commits_tenja$has_ci)
@@ -437,105 +356,57 @@ commits_tenja$is_core <- as.factor(commits_tenja$is_core)
 tenja_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_tenja))
 c1_rsq <- c(c1_rsq, tenja_sum$r.squared)
 
-#Cluster 2 - 6 projects - (green)
 #NVIDIA/NeMo
 commits_nemo <- data.frame(read.csv2('commits_nemo.csv', sep = ","))
 commits_nemo$has_ci <- as.factor(commits_nemo$has_ci)
 commits_nemo$is_core <- as.factor(commits_nemo$is_core)
 nemo_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_nemo))
-c2_rsq <- c(c2_rsq, nemo_sum$r.squared)
-#learningequality/kolibri
-commits_kolibri <- data.frame(read.csv2('commits_kolibri.csv', sep = ","))
-commits_kolibri$has_ci <- as.factor(commits_kolibri$has_ci)
-commits_kolibri$is_core <- as.factor(commits_kolibri$is_core)
-kolibri_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_kolibri))
-c2_rsq <- c(c2_rsq, kolibri_sum$r.squared)
+c1_rsq <- c(c1_rsq, nemo_sum$r.squared)
+
 #SAP/ui5-webcomponents
 commits_ui5 <- data.frame(read.csv2('commits_ui5.csv', sep = ","))
 commits_ui5$has_ci <- as.factor(commits_ui5$has_ci)
 commits_ui5$is_core <- as.factor(commits_ui5$is_core)
 ui5_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_ui5))
-c2_rsq <- c(c2_rsq, ui5_sum$r.squared)
+c1_rsq <- c(c1_rsq, ui5_sum$r.squared)
+
+#Cluster 2 - 3 projects - (green)
 #microsoft/azuredatastudio
 commits_azure <- data.frame(read.csv2('commits_azure.csv', sep = ","))
 commits_azure$has_ci <- as.factor(commits_azure$has_ci)
 commits_azure$is_core <- as.factor(commits_azure$is_core)
 azure_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_azure))
 c2_rsq <- c(c2_rsq, azure_sum$r.squared)
-#magma/magma
-commits_magma <- data.frame(read.csv2('commits_magma.csv', sep = ","))
-commits_magma$has_ci <- as.factor(commits_magma$has_ci)
-commits_magma$is_core <- as.factor(commits_magma$is_core)
-magma_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_magma))
-c2_rsq <- c(c2_rsq, magma_sum$r.squared)
-#thesofproject/sof
-commits_sof <- data.frame(read.csv2('commits_sof.csv', sep = ","))
-commits_sof$has_ci <- as.factor(commits_sof$has_ci)
-commits_sof$is_core <- as.factor(commits_sof$is_core)
-sof_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_sof))
-c2_rsq <- c(c2_rsq, sof_sum$r.squared)
 
-#Cluster 3 - 11 projects - (blue)
-#kubernetes/kops
-commits_kops <- data.frame(read.csv2('commits_kops.csv', sep = ","))
-commits_kops$has_ci <- as.factor(commits_kops$has_ci)
-commits_kops$is_core <- as.factor(commits_kops$is_core)
-kops_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_kops))
-c3_rsq <- c(c3_rsq, kops_sum$r.squared)
-#vueuse/vueuse
-commits_vueuse <- data.frame(read.csv2('commits_vueuse.csv', sep = ","))
-commits_vueuse$has_ci <- as.factor(commits_vueuse$has_ci)
-commits_vueuse$is_core <- as.factor(commits_vueuse$is_core)
-vueuse_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_vueuse))
-c3_rsq <- c(c3_rsq, vueuse_sum$r.squared)
-#yuzu-emu/yuzu
-commits_yuzu <- data.frame(read.csv2('commits_yuzu.csv', sep = ","))
-commits_yuzu$has_ci <- as.factor(commits_yuzu$has_ci)
-commits_yuzu$is_core <- as.factor(commits_yuzu$is_core)
-yuzu_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_yuzu))
-c3_rsq <- c(c3_rsq, yuzu_sum$r.squared)
-#fyne-io/fyne
-commits_fyne <- data.frame(read.csv2('commits_fyne.csv', sep = ","))
-commits_fyne$has_ci <- as.factor(commits_fyne$has_ci)
-commits_fyne$is_core <- as.factor(commits_fyne$is_core)
-fyne_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_fyne))
-c3_rsq <- c(c3_rsq, fyne_sum$r.squared)
-#TanStack/query
-commits_query <- data.frame(read.csv2('commits_query.csv', sep = ","))
-commits_query$has_ci <- as.factor(commits_query$has_ci)
-commits_query$is_core <- as.factor(commits_query$is_core)
-query_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_query))
-c3_rsq <- c(c3_rsq, query_sum$r.squared)
-#lvgl/lvgl
-commits_lvgl <- data.frame(read.csv2('commits_lvgl.csv', sep = ","))
-commits_lvgl$has_ci <- as.factor(commits_lvgl$has_ci)
-commits_lvgl$is_core <- as.factor(commits_lvgl$is_core)
-lvgl_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_lvgl))
-c3_rsq <- c(c3_rsq, lvgl_sum$r.squared)
-#containers/podman
-commits_podman <- data.frame(read.csv2('commits_podman.csv', sep = ","))
-commits_podman$has_ci <- as.factor(commits_podman$has_ci)
-commits_podman$is_core <- as.factor(commits_podman$is_core)
-podman_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_podman))
-c3_rsq <- c(c3_rsq, podman_sum$r.squared)
-#arendst/Tasmota
-commits_tasmota <- data.frame(read.csv2('commits_tasmota.csv', sep = ","))
-commits_tasmota$has_ci <- as.factor(commits_tasmota$has_ci)
-commits_tasmota$is_core <- as.factor(commits_tasmota$is_core)
-tasmota_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_tasmota))
-c3_rsq <- c(c3_rsq, tasmota_sum$r.squared)
+#xamarin/xamarin-macios
+commits_xamarin <- data.frame(read.csv2('commits_xamarin.csv', sep = ","))
+commits_xamarin$has_ci <- as.factor(commits_xamarin$has_ci)
+commits_xamarin$is_core <- as.factor(commits_xamarin$is_core)
+xamarin_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_xamarin))
+c2_rsq <- c(c2_rsq, xamarin_sum$r.squared)
+
+#pingcap/docs
+commits_docs <- data.frame(read.csv2('commits_docs.csv', sep = ","))
+commits_docs$has_ci <- as.factor(commits_docs$has_ci)
+commits_docs$is_core <- as.factor(commits_docs$is_core)
+docs_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_docs))
+c2_rsq <- c(c2_rsq, docs_sum$r.squared)
+
+#Cluster 3 - 10 projects - (blue)
 #umijs/umi
 commits_umi <- data.frame(read.csv2('commits_umi.csv', sep = ","))
 commits_umi$has_ci <- as.factor(commits_umi$has_ci)
 commits_umi$is_core <- as.factor(commits_umi$is_core)
 umi_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_umi))
 c3_rsq <- c(c3_rsq, umi_sum$r.squared)
+
 #netbox-community/netbox
 commits_netbox <- data.frame(read.csv2('commits_netbox.csv', sep = ","))
 commits_netbox$has_ci <- as.factor(commits_netbox$has_ci)
 commits_netbox$is_core <- as.factor(commits_netbox$is_core)
 netbox_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_netbox))
 c3_rsq <- c(c3_rsq, netbox_sum$r.squared)
+
 #grafana/loki
 commits_loki <- data.frame(read.csv2('commits_loki.csv', sep = ","))
 commits_loki$has_ci <- as.factor(commits_loki$has_ci)
@@ -543,41 +414,112 @@ commits_loki$is_core <- as.factor(commits_loki$is_core)
 loki_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_loki))
 c3_rsq <- c(c3_rsq, loki_sum$r.squared)
 
+#awsdocs/aws-doc-sdk-examples
+commits_awsdoc <- data.frame(read.csv2('commits_aws-doc.csv', sep = ","))
+commits_awsdoc$has_ci <- as.factor(commits_awsdoc$has_ci)
+commits_awsdoc$is_core <- as.factor(commits_awsdoc$is_core)
+awsdoc_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_awsdoc))
+c3_rsq <- c(c3_rsq, awsdoc_sum$r.squared)
+
+#vueuse/vueuse
+commits_vueuse <- data.frame(read.csv2('commits_vueuse.csv', sep = ","))
+commits_vueuse$has_ci <- as.factor(commits_vueuse$has_ci)
+commits_vueuse$is_core <- as.factor(commits_vueuse$is_core)
+vueuse_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_vueuse))
+c3_rsq <- c(c3_rsq, vueuse_sum$r.squared)
+
+#yuzu-emu/yuzu
+commits_yuzu <- data.frame(read.csv2('commits_yuzu.csv', sep = ","))
+commits_yuzu$has_ci <- as.factor(commits_yuzu$has_ci)
+commits_yuzu$is_core <- as.factor(commits_yuzu$is_core)
+yuzu_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_yuzu))
+c3_rsq <- c(c3_rsq, yuzu_sum$r.squared)
+
+#TanStack/query
+commits_query <- data.frame(read.csv2('commits_query.csv', sep = ","))
+commits_query$has_ci <- as.factor(commits_query$has_ci)
+commits_query$is_core <- as.factor(commits_query$is_core)
+query_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_query))
+c3_rsq <- c(c3_rsq, query_sum$r.squared)
+
+#lvgl/lvgl
+commits_lvgl <- data.frame(read.csv2('commits_lvgl.csv', sep = ","))
+commits_lvgl$has_ci <- as.factor(commits_lvgl$has_ci)
+commits_lvgl$is_core <- as.factor(commits_lvgl$is_core)
+lvgl_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_lvgl))
+c3_rsq <- c(c3_rsq, lvgl_sum$r.squared)
+
+#arendst/Tasmota
+commits_tasmota <- data.frame(read.csv2('commits_tasmota.csv', sep = ","))
+commits_tasmota$has_ci <- as.factor(commits_tasmota$has_ci)
+commits_tasmota$is_core <- as.factor(commits_tasmota$is_core)
+tasmota_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_tasmota))
+c3_rsq <- c(c3_rsq, tasmota_sum$r.squared)
+
+#Aircoookie/WLED
+commits_wled <- data.frame(read.csv2('commits_wled.csv', sep = ","))
+commits_wled$has_ci <- as.factor(commits_wled$has_ci)
+commits_wled$is_core <- as.factor(commits_wled$is_core)
+wled_sum <- summary(lm(num_issues ~ has_ci + is_core + has_ci*is_core, data = commits_wled))
+c3_rsq <- c(c3_rsq, wled_sum$r.squared)
+
 all_r2 <- list(c1_rsq, c2_rsq, c3_rsq)
 boxplot(all_r2, ylim = c(0,1), col = c(2, 3, 4))
 
 plot(commits_texstudio$commit_month, commits_texstudio$num_issues, col = commits_texstudio$has_ci)
 plot(commits_texstudio$commit_month, commits_texstudio$num_issues, col = commits_texstudio$is_core)
 
-
 ci_scores <- list(
-  c1_ci <- c(-7.14,-15.06,1.14,-24.31,47.56,105.74,-12.64,-11.957,-16.74,-15.95,-107.51,-54.66,-42.83,
-             -166.086,23.22,-13.6,-6.3,-12.16,10.66,12.69,-118.224,-50.686,-1.83,7.56,17.69,142.82,17.24,
-             7.05,117.73,78.98,-23.493,-29.38,-15.14,-16.26,2.27,-38.04,-4.2,-136.83,-3.78,-6.51,-38.487,
-             -2.88,7.24,113.455,33.548,7.0276,5.84,-14.35,-148.24,22.59,-8.1,-18.36,15.2,26.215,-47.51,
-             18.52,1.87,-23.65,-9.54),
-  c2_ci <- c(-5.58,44.398,-14.06,37.44,540.88,24.15),
-  c3_ci <- c(-353.249,43.59,146.683,-10.07,6.56,54.147,-47.8,141.38,27.89,-39.127)
+  c1_ci <- c(-7.14,-15.06,1.14,-24.31,47.56,105.74,-12.64,-11.957,-16.74,-15.95,-54.66,-42.83,-166.086,
+             23.22,-13.6,-6.3,-12.16,10.66,-118.224,-50.686,-1.83,17.69,142.82,78.98,-23.493,-29.38,-15.14,
+             -16.26,2.27,-4.2,-3.78,-2.88,7.24,113.455,33.548,7.0276,5.84,-14.35,-148.24,22.59,-8.1,-18.36,
+             15.2,26.215,-47.51,18.52,1.87,-9.54,-5.58,-14.06),
+  c2_ci <- c(37.44,12.69),
+  c3_ci <- c(141.38,27.89,-39.127,117.73,43.59,146.683,6.56)
 )
 
 #BOXPLOT AND T-test
 core_scores <- list(
-  c1_core <- c(1.1199,-2.57,-8.36,73.72,-8.06,-4.52,31.578,5.6,8.1,-6.64,8.7,-8.26,-9.74,11.53,-29.464,
-               5.47,-2.95,-7.849,3.37,20.99,10.009,-4.558,-4.82,2.55,-12.14,34.32,-4.08,-9.42,
-               3.85,-4.62,-2.1,52.74,3.67,-10.69,-58.707,-3.25,40.49,-106.483,3.85,-5.9,-77.92,
-               5.37,38.96,8.4,-12.443,-2.45,-4.33,-1.88,20,-4.41),
-  c2_core <- c(11.39,85.446,-32.01,247.54,102.18,15.1),
-  c3_core <- c(-66.2,-14.235,60.546,-15.89,-6.25,-2.51,5.92,62.56,-12.01,38.284)
+  c1_core <- c(1.1199,-2.57,-8.36,73.72,-8.06,-4.52,31.578,5.6,8.1,-6.64,8.7,-9.74,11.53,-29.464,5.47,-2.95,-7.849,3.37,
+    20.99,10.009,-4.558,-4.82,-12.14,34.32,-4.08,-9.42,3.85,-2.1,3.67,-3.25,40.49,-106.483,3.85,-5.9,-77.92,
+    5.37,38.96,8.4,-12.443,-2.45,-4.33,-1.88,-4.41,11.39,-32.01),
+  c2_core <- c(247.54),
+  c3_core <- c(-12.01,38.284,-14.235,60.546,-6.25,-2.51,62.56,-58.707)
 )
 
 
 inter_scores <- list(
-  c1_inter <- c(8.38,-62.98,10.79,-4.49,-7.11,7.96,-27.285,13.83,84.8,-9.19,4.09,6.107,5.08,-23.28,
-                -2.43,-10.661,4.343,8.46,-2.48,10.76,14.113,-13.42,13.41,32.91,7.7,5.38,2.76,-58.1,
-                -5.34,8.61,137.514,-11.01,-20.9,122.448,2.54,-5.22,9.3,93.73,2.46,-34.579,-9.33,5.332,
-                -11.4,-5.05,4.85,18.05,6.28),
-  c2_inter <- c(-11.22,-62.866,44.95,-148.26,174.59,-6.94),
-  c3_inter <- c(76.506,28.768,9.87,4.84,-3.69,-62.65,19.32,-34.51)
+  c1_inter <- c(8.38,-62.98,10.79,-4.49,-7.11,7.96,-27.285,13.83,84.8,-9.19,4.09,6.107,5.08,-23.28,-10.661,4.343,8.46,10.76,
+                -14.113,32.91,2.76,-5.34,-11.01,-20.9,122.448,2.54,-5.22,9.3,93.73,2.46,-34.579,-9.33,5.332,-11.4,-5.05,
+                4.85,6.28,-11.22,44.95),
+  c2_inter <- c(-148.26,-2.43),
+  c3_inter <- c(19.32,-34.51,13.41,28.768,4.84,-62.65,137.514)
 )
 
-corec2_test <- c(11.39,85.446,-32.01,102.18,15.1)
+boxplot(ci_scores, col = c(2,3,4))
+boxplot(core_scores, col = c(2,3,4))
+boxplot(inter_scores, col = c(2,3,4))
+
+
+t.test(c1_ci)
+t.test(c2_ci)
+t.test(c3_ci)
+t.test(c1_ci,c2_ci)
+t.test(c2_ci, c3_ci)
+t.test(c1_ci, c3_ci)
+
+
+t.test(c1_core)
+t.test(c2_core)
+t.test(c3_core)
+t.test(c1_core,c2_core)
+t.test(c2_core, c3_core)
+t.test(c1_core, c3_core)
+
+
+t.test(c1_inter)
+t.test(c2_inter)
+t.test(c3_inter)
+t.test(c1_inter,c2_inter)
+t.test(c2_inter, c3_inter)
+t.test(c1_inter, c3_inter)
