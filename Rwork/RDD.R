@@ -757,277 +757,281 @@ blazoncek$pv[3]
 commits_tasmota <- data.frame(read.csv2('commits_tasmota2.csv', sep = ","))
 commits_tasmota$days_since_first<- as.numeric(commits_tasmota$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+gemu2015<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 541.28)
+gemu2015$coef[3]
+gemu2015$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+Jason2866<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 515.08)
+Jason2866$coef[3]
+Jason2866$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+curzon01<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 571.2)
+curzon01$coef[3]
+curzon01$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+bovirus<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1157.83)
+bovirus$coef[3]
+bovirus$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+emontnemery<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 545.11)
+emontnemery$coef[3]
+emontnemery$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+Staars<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 507.98)
+Staars$coef[3]
+Staars$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+shadinger<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 810.74)
+shadinger$coef[3]
+shadinger$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+stefanbode<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 982.12)
+stefanbode$coef[3]
+stefanbode$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+blakadder<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 756.47)
+blakadder$coef[3]
+blakadder$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+ascillato<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 405.62)
+ascillato$coef[3]
+ascillato$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+barbudor<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1125.07)
+barbudor$coef[3]
+barbudor$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+ascillato2<- rdrobust::rdrobust(commits_tasmota$num_issues, commits_tasmota$days_since_first, c = 495.81)
+ascillato2$coef[3]
+ascillato2$pv[3]
 
 #awsdocs/aws-doc-sdk-examples
 commits_awsdoc <- data.frame(read.csv2('commits_aws-doc2.csv', sep = ","))
 commits_awsdoc$days_since_first<- as.numeric(commits_awsdoc$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+brmur<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1311.38)
+brmur$coef[3]
+brmur$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+scmacdon<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1176.5)
+scmacdon$coef[3]
+scmacdon$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+LarenAWS<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1192.64)
+LarenAWS$coef[3]
+LarenAWS$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+beqqrryaws<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1846.98)
+beqqrryaws$coef[3]
+beqqrryaws$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+irenepsmith<- rdrobust::rdrobust(commits_awsdoc$num_issues, commits_awsdoc$days_since_first, c = 1551.55)
+irenepsmith$coef[3]
+irenepsmith$pv[3]
 
 #grafana/loki
 commits_loki <- data.frame(read.csv2('commits_loki2.csv', sep = ","))
 commits_loki$days_since_first<- as.numeric(commits_loki$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+chaudum<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1236.32)
+chaudum$coef[3]
+chaudum$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+RedGV<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1114.98)
+RedGV$coef[3]
+RedGV$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+kavirajk<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 908.52)
+kavirajk$coef[3]
+kavirajk$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+jeschkies<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 928.61)
+jeschkies$coef[3]
+jeschkies$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+salvacorts<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1315.74)
+salvacorts$coef[3]
+salvacorts$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+owend<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 578.43)
+owend$coef[3]
+owend$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+dannykopping<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 991.61)
+dannykopping$coef[3]
+dannykopping$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+trevorwhitney<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1106.03)
+trevorwhitney$coef[3]
+trevorwhitney$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+rfratto<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 454.55)
+rfratto$coef[3]
+rfratto$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+liguozhong<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 989.79)
+liguozhong$coef[3]
+liguozhong$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+MichelHollands<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 968.73)
+MichelHollands$coef[3]
+MichelHollands$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+MasslessParticle<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1204.63)
+MasslessParticle$coef[3]
+MasslessParticle$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+cstyan<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 731.61)
+cstyan$coef[3]
+cstyan$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+xperimental<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1411.89)
+xperimental$coef[3]
+xperimental$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+cyriltovena<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 366.34)
+cyriltovena$coef[3]
+cyriltovena$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+DylanGuedes<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1270.61)
+DylanGuedes$coef[3]
+DylanGuedes$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+sandeepsukhani<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 354.21)
+sandeepsukhani$coef[3]
+sandeepsukhani$pv[3]
+
+periklis<- rdrobust::rdrobust(commits_loki$num_issues, commits_loki$days_since_first, c = 782.8)
+periklis$coef[3]
+periklis$pv[3]
 
 #lvgl/lvgl
 commits_lvgl <- data.frame(read.csv2('commits_lvgl2.csv', sep = ","))
 commits_lvgl$days_since_first<- as.numeric(commits_lvgl$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_lvgl$num_issues, commits_lvgl$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+FASTSHIFT<- rdrobust::rdrobust(commits_lvgl$num_issues, commits_lvgl$days_since_first, c = 1865.21)
+FASTSHIFT$coef[3]
+FASTSHIFT$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_lvgl$num_issues, commits_lvgl$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+embeddedt<- rdrobust::rdrobust(commits_lvgl$num_issues, commits_lvgl$days_since_first, c = 879.86)
+embeddedt$coef[3]
+embeddedt$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_lvgl$num_issues, commits_lvgl$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+amirgon<- rdrobust::rdrobust(commits_lvgl$num_issues, commits_lvgl$days_since_first, c = 894.96)
+amirgon$coef[3]
+amirgon$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_lvgl$num_issues, commits_lvgl$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+C47D<- rdrobust::rdrobust(commits_lvgl$num_issues, commits_lvgl$days_since_first, c = 874.72)
+C47D$coef[3]
+C47D$pv[3]
 
 #netbox-community/netbox
 commits_netbox <- data.frame(read.csv2('commits_netbox2.csv', sep = ","))
 commits_netbox$days_since_first<- as.numeric(commits_netbox$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_netbox$num_issues, commits_netbox$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+lampwins<- rdrobust::rdrobust(commits_netbox$num_issues, commits_netbox$days_since_first, c = 686.22)
+lampwins$coef[3]
+lampwins$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_netbox$num_issues, commits_netbox$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+DanSheps<- rdrobust::rdrobust(commits_netbox$num_issues, commits_netbox$days_since_first, c = 813.67)
+DanSheps$coef[3]
+DanSheps$pv[3]
 
 #TanStack/query
 commits_query <- data.frame(read.csv2('commits_query2.csv', sep = ","))
 commits_query$days_since_first<- as.numeric(commits_query$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_query$num_issues, commits_query$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+TkDodo<- rdrobust::rdrobust(commits_query$num_issues, commits_query$days_since_first, c = 261.85)
+TkDodo$coef[3]
+TkDodo$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_query$num_issues, commits_query$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+DamianOsipiuk<- rdrobust::rdrobust(commits_query$num_issues, commits_query$days_since_first, c = 585)
+DamianOsipiuk$coef[3]
+DamianOsipiuk$pv[3]
 
 #umijs/umi
 commits_umi <- data.frame(read.csv2('commits_umi2.csv', sep = ","))
 commits_umi$days_since_first<- as.numeric(commits_umi$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+stormslowly<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1558.05)
+stormslowly$coef[3]
+stormslowly$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+chenshuai2144<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 325.93)
+chenshuai2144$coef[3]
+chenshuai2144$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+PeachScript<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 877.23)
+PeachScript$coef[3]
+PeachScript$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+xierenyuan<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1539.82)
+xierenyuan$coef[3]
+xierenyuan$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+ycjcl868<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 475.43)
+ycjcl868$coef[3]
+ycjcl868$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+fz6m<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1492.8)
+fz6m$coef[3]
+fz6m$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+kuitos<- rdrobust::rdrobust(commits_umi$num_issues, commits_umi$days_since_first, c = 540.5)
+kuitos$coef[3]
+kuitos$pv[3]
 
 #vueuse/vueuse
 commits_vueuse <- data.frame(read.csv2('commits_vueuse2.csv', sep = ","))
 commits_vueuse$days_since_first<- as.numeric(commits_vueuse$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_vueuse$num_issues, commits_vueuse$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+wheatjs<- rdrobust::rdrobust(commits_vueuse$num_issues, commits_vueuse$days_since_first, c = 408.09)
+wheatjs$coef[3]
+wheatjs$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_vueuse$num_issues, commits_vueuse$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+sibbng<- rdrobust::rdrobust(commits_vueuse$num_issues, commits_vueuse$days_since_first, c = 328.1)
+sibbng$coef[3]
+sibbng$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_vueuse$num_issues, commits_vueuse$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+okxiaoliang4<- rdrobust::rdrobust(commits_vueuse$num_issues, commits_vueuse$days_since_first, c = 673.93)
+okxiaoliang4$coef[3]
+okxiaoliang4$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_vueuse$num_issues, commits_vueuse$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+webfansplz<- rdrobust::rdrobust(commits_vueuse$num_issues, commits_vueuse$days_since_first, c = 585.98)
+webfansplz$coef[3]
+webfansplz$pv[3]
 
 #yuzu-emu/yuzu
 commits_yuzu <- data.frame(read.csv2('commits_yuzu2.csv', sep = ","))
 commits_yuzu$days_since_first<- as.numeric(commits_yuzu$days_since_first)
 
-blazoncek<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+ameerj<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 898.08)
+ameerj$coef[3]
+ameerj$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+liamwhite<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1527.9)
+liamwhite$coef[3]
+liamwhite$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+lat9nq<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 849.48)
+lat9nq$coef[3]
+lat9nq$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+vonchenplus<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1280.39)
+vonchenplus$coef[3]
+vonchenplus$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+german77<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 917.48)
+german77$coef[3]
+german77$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+Kelebek1<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1136.61)
+Kelebek1$coef[3]
+Kelebek1$pv[3]
 
-blazoncek<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 1453.49)
-blazoncek$coef[3]
-blazoncek$pv[3]
+Morph1984<- rdrobust::rdrobust(commits_yuzu$num_issues, commits_yuzu$days_since_first, c = 605.27)
+Morph1984$coef[3]
+Morph1984$pv[3]
 
 
 
@@ -1038,57 +1042,35 @@ boxplot(all_r2, ylim = c(0,1), col = c(2, 3, 4))
 plot(commits_texstudio$commit_month, commits_texstudio$num_issues, col = commits_texstudio$has_ci)
 plot(commits_texstudio$commit_month, commits_texstudio$num_issues, col = commits_texstudio$is_core)
 
-ci_scores <- list(
-  c1_ci <- c(-7.14,-15.06,1.14,-24.31,47.56,105.74,-12.64,-11.957,-16.74,-15.95,-54.66,-42.83,-166.086,
-             23.22,-13.6,-6.3,-12.16,10.66,-118.224,-50.686,-1.83,17.69,142.82,78.98,-23.493,-29.38,-15.14,
-             -16.26,2.27,-4.2,-3.78,-2.88,7.24,113.455,33.548,7.0276,5.84,-14.35,-148.24,22.59,-8.1,-18.36,
-             15.2,26.215,-47.51,18.52,1.87,-9.54,-5.58,-14.06),
-  c2_ci <- c(37.44,12.69),
-  c3_ci <- c(141.38,27.89,-39.127,117.73,43.59,146.683,6.56)
+scores <- list(
+  c1 <- c(2.14, 0.01, -0.11, -0.95, 0.65, -0.31, 4.04, 0.68, 7.63, 2.07,1.39, -3.45, -0.6, -4.19,
+          -0.65, 0.43, -1.09, 2.46, 0.42, -3.13, 0.15, -3.33, 2.9, 0.02, -15.27, -0.009, 0.4, 2.66,
+          -0.91, -3.75, 3.64, 0.24, 8.71, 46.99, 5.77, 0.96, 1.67, -8.27, 4.52, 0.07, -0.68, 1.11,
+          0.14, 0.79, -1.07, -4.75, 1.48, -1.08, -2.74, 2.83, 4.7, -9.12, 1.24, -3.85, -5.97, -2.64,
+          1.42, -3.18, 0.54, -32.98, 1.55, 3.48, -8.75, 3.37, -1.53, 3.94, 2.43, 4.36, -5.16, 0.005,
+          -0.65, 2.07, 7.49, 2.06, -18.09, -3.26, -0.83, 15.53, -1.08, -2.78, -0.08, -4.46, -2.47,
+          -5.03, -4.94, -3.55, -7.88, 2.23, -1.84, -1.59, -0.69, 1.99, 0.084, -0.12, 1.76, 1.52, 0.26,
+          -9.59, -0.4, 0.013, 0.066, -3.91, -0.51, -3.91, -1.577, 1.22, 0.82, 0.8, 2.69, 2.08, 3.56,
+          -0.19, -0.96, -1.27),
+  c2 <- c(-3.31, -6.12, -14.67, 0.79, 13.4, -6.24, 5.36, -4.03, 0.22, 2.88, -0.47, 5.1, 4.09, 1.34,
+          -0.73, 0.85, -0.63, -0.29, -0.04, -0.08, 0.5, -0.27, -0.08, 0.51, -4.93),
+  c3 <- c(-6.76, -3.27, -10.23, -9.01, 0.37, 4.18, -168.09, -0.4, 0.07, -1.77, 1.26, -0.6, 41.48,
+          -1.51, 0.68, -0.19, 0.052, -0.03, 0.76, -1.92, -1.21, 2.17, -2.38, -28.23, -0.164, 6.86,
+          -2.28, 2.7, -4.16, -1.66, -1.09, -4.66, -3.81, 6.97, -0.57, 2.79, -1.65, -6.2, 0.81, -0.82,
+          0.11, 4.32, 1.66, 1.69, 0.34, 2.58, 4.43, 0.34, -2, -0.21, -3.13, 1.59, -1.28, 5.55, -0.7,
+          -1.16, -1.22, 5.05, -18.29, -3.43)
 )
 
-#BOXPLOT AND T-test
-core_scores <- list(
-  c1_core <- c(1.1199,-2.57,-8.36,73.72,-8.06,-4.52,31.578,5.6,8.1,-6.64,8.7,-9.74,11.53,-29.464,5.47,-2.95,-7.849,3.37,
-               20.99,10.009,-4.558,-4.82,-12.14,34.32,-4.08,-9.42,3.85,-2.1,3.67,-3.25,40.49,-106.483,3.85,-5.9,-77.92,
-               5.37,38.96,8.4,-12.443,-2.45,-4.33,-1.88,-4.41,11.39,-32.01),
-  c2_core <- c(247.54),
-  c3_core <- c(-12.01,38.284,-14.235,60.546,-6.25,-2.51,62.56,-58.707)
-)
+boxplot(scores, col = c(2,3,4), ylim = c(-20,20))
 
 
-inter_scores <- list(
-  c1_inter <- c(8.38,-62.98,10.79,-4.49,-7.11,7.96,-27.285,13.83,84.8,-9.19,4.09,6.107,5.08,-23.28,-10.661,4.343,8.46,10.76,
-                -14.113,32.91,2.76,-5.34,-11.01,-20.9,122.448,2.54,-5.22,9.3,93.73,2.46,-34.579,-9.33,5.332,-11.4,-5.05,
-                4.85,6.28,-11.22,44.95),
-  c2_inter <- c(-148.26,-2.43),
-  c3_inter <- c(19.32,-34.51,13.41,28.768,4.84,-62.65,137.514)
-)
 
-boxplot(ci_scores, col = c(2,3,4))
-boxplot(core_scores, col = c(2,3,4))
-boxplot(inter_scores, col = c(2,3,4))
+t.test(c1)
+t.test(c2)
+t.test(c3)
+t.test(c1, c2)
+t.test(c2, c3)
+t.test(c1, c3)
 
 
-t.test(c1_ci)
-t.test(c2_ci)
-t.test(c3_ci)
-t.test(c1_ci,c2_ci)
-t.test(c2_ci, c3_ci)
-t.test(c1_ci, c3_ci)
-
-
-t.test(c1_core)
-t.test(c2_core)
-t.test(c3_core)
-t.test(c1_core,c2_core)
-t.test(c2_core, c3_core)
-t.test(c1_core, c3_core)
-
-
-t.test(c1_inter)
-t.test(c2_inter)
-t.test(c3_inter)
-t.test(c1_inter,c2_inter)
-t.test(c2_inter, c3_inter)
-t.test(c1_inter, c3_inter)
+plot(commits_tasmota$days_since_first, commits_tasmota$num_issues, col = commits_tasmota$has_ci+1)
